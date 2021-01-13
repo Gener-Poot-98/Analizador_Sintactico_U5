@@ -325,11 +325,11 @@ def p_empty(p):
 def p_error(p):
     if VERBOSE:
         if p is not None:
-            print (chr(27)+"[1;31m"+"\t ERROR: Syntax error - Unexpected token" + chr(27)+"[0m")
-            print ("\t\tLine: "+str(p.lexer.lineno)+"\t=> "+str(p.value))
+            print (chr(27)+"[1;31m"+"\t ERROR: Token Inesperado" + chr(27)+"[0m")
+            print ("\t\tLinea: "+str(p.lexer.lineno)+"\t=> "+str(p.value))
         else:
             print (chr(27)+"[1;31m"+"\t Error durante la compilación: “Error de sintáxis”"+chr(27)+"[0m")
-            print ("\t\tLine:  "+str(p))
+            print ("\t\tLinea:  "+str(p))
 
     else:
         raise Exception('syntax', 'error')
